@@ -1,11 +1,5 @@
 <?php
-$dbhost="localhost";
-$dbuser="User";
-$dbpassword="abc123";
-$dbname="project1";
-
-//function to connect to the database
-$db = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
+require("../db/db.php");
 
 $email=$_REQUEST["email"];
 $password=$_REQUEST["password"];
@@ -20,7 +14,7 @@ $password = htmlspecialchars($password);
 //$password = quote_smart($password, $db);
 
 
-$sql="SELECT * FROM signup where Email='$email' AND Password='$password'";
+$sql="SELECT * FROM customer where Email='$email' AND Password='$password'";
 $result = mysqli_query($db,$sql);
 
 

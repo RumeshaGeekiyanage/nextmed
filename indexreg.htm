@@ -193,7 +193,7 @@
 		<div class="menubuttonimg login"  >
 			<img src="media\login.png" style="width:auto;margin:20%;height:60%" id="loginIcon" >
 			<div class="loginbox login" id="loginB">
-			<form action="All/logout.php" method="post">
+			<form action="php/logout.php" method="post">
 			<br>
 				<div class="textnotify login">
 				<h1> You are logged in </h1>
@@ -296,53 +296,6 @@
 		//slides.style.position = "relative";
 	}
 	
-	function authenticate(email, password, note)
-    {
-	var emailIn = document.getElementById(email);
-	var passwordIn = document.getElementById(password);
-	var notify = document.getElementById(note);
-	notify.style.opacity="0";
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			var str = xmlhttp.responseText;
-			if(str.localeCompare("Success")==0){
-				window.location = "indexreg.htm";
-			}
-			else{
-				notify.style.opacity="1";
-				notify.innerHTML = "invalid username or password";
-			}
-		}
-	};
-	xmlhttp.open("GET", "All/login_action.php?email=" + emailIn.value + "&password=" + passwordIn.value, true);
-	xmlhttp.send();
-    
-	}
-	
-	function authenticate1(nic, password, note)
-    {
-	var nicIn = document.getElementById(nic);
-	var passwordIn = document.getElementById(password);
-	var notify = document.getElementById(note);
-	notify.style.opacity="0";
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			var str = xmlhttp.responseText;
-			if(str.localeCompare("Success")==0){
-				window.location = "indexreg.htm";
-			}
-			else{
-				notify.style.opacity="1";
-				notify.innerHTML = "invalid username or password";
-			}
-		}
-	};
-	xmlhttp.open("GET", "All/login_action.php?email=" + emailIn.value + "&password=" + passwordIn.value, true);
-	xmlhttp.send();
-    
-	}
 	</script>
 
 </body>

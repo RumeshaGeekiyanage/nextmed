@@ -363,10 +363,13 @@
 	function authenticateCst(email, password, note)
     {
 		note.style.opacity="0";
+
 		var xmlhttp = new XMLHttpRequest();
+		
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				var str = xmlhttp.responseText;
+				
 				if(str.localeCompare("Success")==0){
 					window.location = "indexreg.htm";
 				}
@@ -376,7 +379,7 @@
 				}
 			}
 		};
-		xmlhttp.open("GET", "All/login_action.php?email=" + email.value + "&password=" + password.value, true);
+		xmlhttp.open("GET", "php/login_action_cst.php?email=" + email.value + "&password=" + password.value, true);
 		xmlhttp.send();
 	}
 	
@@ -396,7 +399,7 @@
 			}
 		}
 	};
-		xmlhttp.open("GET", "All/login_action1.php?nic=" + nic.value + "&password=" + password.value, true);
+		xmlhttp.open("GET", "php/login_action_emp.php?nic=" + nic.value + "&password=" + password.value, true);
 		xmlhttp.send();
     
 	}
