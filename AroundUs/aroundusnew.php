@@ -26,7 +26,7 @@
 				<!--input name = "location" type = "text" size = "30" /-->
 				<select name="location" type="text">
 					<option value="Gampaha"> Gampaha </option>
-					<option value="Ragame"> Ragame </option>
+					<option value="Ragame"> Ragama </option>
 					<option value="Wattupitiawala"> Wattupitiwala </option>
 					<option value="Negambo"> Negambo </option>
 					<option value="Minuwangoda">  Minuwangoda </option>
